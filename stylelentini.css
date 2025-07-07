@@ -941,7 +941,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     left: 10px;
   }
 
-
 /* Stile per il footer */
 .footer {
   background-color: #1893d1;
@@ -971,7 +970,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 .footer-colonna {
   display: flex;
   flex-direction: column;
-  align-items:flex-start; /* Centra gli elementi all'interno della colonna */
+  align-items: flex-start; /* Centra gli elementi all'interno della colonna */
   justify-content: flex-start;
   width: 45%;
   text-align: left;
@@ -988,7 +987,8 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 }
 
 .header-block h3 {
-  font-size: 36px;
+  font-size: 38px; /* Aumentato il font-size per il titolo */
+  font-weight: 700;
   margin-bottom: 12px;
   font-family: 'DM Serif Display', serif;
 }
@@ -999,7 +999,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   width: 80px; /* Ridotto a 80px per uniformarlo */
   height: auto;
 }
-
 
 /* Righe contatto (icona + testo) */
 .contact-item {
@@ -1022,38 +1021,10 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 /* Testo contatti */
 .contact-item span,
 .contact-item a {
-  font-size: 16px;
+  font-size: 16px; /* Aumentato il font-size per migliorare la leggibilità */
   color: #EDF7FD;
   text-decoration: none;
   vertical-align: middle; /* Allineamento verticale */
-}
-.footer-colonna {
-    text-align: left; /* Uniforma l'allineamento */
-}
-/* Allineamento verticale dei contatti */
-.footer-colonna .contact-item {
-  margin-top: -5px; /* Rimuove margini extra tra i contatti */
-}
-
-/* Allineamento preciso per i contatti */
-.footer-colonna:last-of-type .contact-item:first-of-type {
-  margin-top: -5px; /* Abbassa leggermente la prima riga dei contatti di Siracusa */
-}
-
-/* Colonna Pro Loco Marzamemi */
-.footer-colonna:first-of-type {
-  margin-bottom: 0px; /* Nessuna distanza extra per Marzamemi */
-  text-align: left;
-}
-
-/* Colonna Pro Loco Siracusa */
-.footer-colonna:last-of-type {
-  margin-top: 0px; /* Nessuna distanza extra per Siracusa */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center; /* Allinea verticalmente la colonna con Marzamemi */
-  text-align: left;
 }
 
 /* Footer basso */
@@ -1076,24 +1047,14 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   text-decoration: underline;
 }
 
+/* Effetto hover per i contatti */
 .contact-item {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .contact-item:hover {
-    opacity: 0.8;
-    transform: translateX(5px); /* Spostamento leggero verso destra */
-}
-
-
-
-.header-block h3 {
-    font-size: 38px; /* Aumentato il font-size per il titolo */
-    font-weight: 700;
-}
-
-.contact-item span, .contact-item a {
-    font-size: 16px; /* Aumentato il font-size per migliorare la leggibilità */
+  opacity: 0.8;
+  transform: translateX(5px); /* Spostamento leggero verso destra */
 }
 
 /* Media Queries per dispositivi mobili */
@@ -1102,10 +1063,11 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     flex-direction: column;
     align-items: center;
     gap: 20px; /* Diminuisce lo spazio tra le colonne sui dispositivi mobili */
+    padding: 0 20px; /* Aggiungi padding per dare spazio sui bordi */
   }
 
   .footer-colonna {
-    width: 80%; /* Le colonne occupano più spazio su dispositivi più piccoli */
+    width: 100%; /* Le colonne occupano l'intera larghezza */
     text-align: center;
   }
 
@@ -1118,53 +1080,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   }
 }
 
-
-
-/* Responsiveness: quando la larghezza della finestra è più piccola di 768px */
-@media (max-width: 768px) {
-  .footer-contenuto {
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      padding: 0 20px;
-  }
-
-  .footer-colonna {
-      width: 100%; /* Le colonne occupano l'intera larghezza */
-      text-align: center;
-  }
-
-  .header-block img {
-      width: 80px; /* Riduce la larghezza dei loghi sui dispositivi mobili */
-  }
-
-  .contact-item {
-      max-width: 100%;
-      text-align: center;
-  }
-}
-
-
-
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-    .footer-contenuto {
-        flex-direction: column;
-        gap: 40px;
-        align-items: center;
-    }
-
-    .footer-colonna {
-        align-items: center;
-        width: 80%;
-    }
-
-    .contact-item {
-        justify-content: center;
-    }
-}
-
+/* Sponsor Carousel */
 .sponsor-carousel {
   overflow: hidden;
   background-color: #1893d1;
@@ -1182,7 +1098,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 
 .sponsor-track {
   display: flex;
-  animation: scroll-sponsors 25s linear infinite; /* durata aumentata da 12s a 30s per rallentare */
+  animation: scroll-sponsors 30s linear infinite; /* durata aumentata da 12s a 30s per rallentare */
   justify-content: center;
 }
 
@@ -1206,51 +1122,39 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   }
 }
 
-
-@keyframes scroll-sponsors {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Bottone */
-
-/* Stili per il bottone "Torna su" */
+/* Bottone "Torna su" */
 .back-to-top {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    bottom: 20px; /* Posizione del bottone in basso */
-    right: 20px;  /* Posizione del bottone a destra */
-    background-color: #edf7ed; /* Colore di sfondo del bottone */
-    color: #004F9F; /* Colore dell'icona */
-    border-radius: 50%; /* Bottone circolare */
-    padding: 10px; /* Distanza attorno all'icona */
-    opacity: 0; /* Il bottone sarà inizialmente invisibile */
-    transition: opacity 0.3s ease; /* Animazione per l'opacità */
-    z-index: 1000; /* Assicura che il bottone sia sopra altri elementi */
-    cursor: pointer; /* Cursore a forma di mano per indicare cliccabile */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px; /* Posizione del bottone in basso */
+  right: 20px;  /* Posizione del bottone a destra */
+  background-color: #edf7ed; /* Colore di sfondo del bottone */
+  color: #004F9F; /* Colore dell'icona */
+  border-radius: 50%; /* Bottone circolare */
+  padding: 10px; /* Distanza attorno all'icona */
+  opacity: 0; /* Il bottone sarà inizialmente invisibile */
+  transition: opacity 0.3s ease; /* Animazione per l'opacità */
+  z-index: 1000; /* Assicura che il bottone sia sopra altri elementi */
+  cursor: pointer; /* Cursore a forma di mano per indicare cliccabile */
 }
 
 /* Quando si scorre verso il basso e il bottone è visibile */
 .back-to-top.show {
-    opacity: 1; /* Il bottone diventa visibile */
+  opacity: 1; /* Il bottone diventa visibile */
 }
 
 /* Stile per l'icona della freccia */
 .back-to-top svg {
-    width: 24px; /* Dimensione dell'icona */
-    height: 24px;
-    fill: #81C7EA /* Colore dell'icona */
+  width: 24px; /* Dimensione dell'icona */
+  height: 24px;
+  fill: #81C7EA; /* Colore dell'icona */
 }
 
 /* Cambia colore quando si passa sopra il bottone */
 .back-to-top:hover {
-    background-color: #81C7EA; /* Colore di hover */
+  background-color: #81C7EA; /* Colore di hover */
 }
 
 /* Accessibilità: evidenziazione per navigazione da tastiera */
