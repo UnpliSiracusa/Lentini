@@ -752,6 +752,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   .carcere {
     height: auto; /* Imposta l'altezza su 'auto' per adattarsi meglio al contenuto */
     padding: 50px 20px; /* Aggiusta padding per migliorare l'aspetto su schermi piccoli */
+    margin-bottom: 40px;
   }
 }
  @media (max-width: 480px) {
@@ -828,6 +829,27 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 1em; /* Ridotto per adattarsi meglio ai piccoli schermi */
   }
 }
+@media (max-width: 768px) {
+  .carcere .immagine {
+    position: relative; /* Cambia da assoluto a relativo per evitare sovrapposizioni */
+    margin-bottom: 20px; /* Spazio sotto l'immagine per evitare il contatto con il testo */
+    max-width: 90%; /* Aumenta l'immagine per schermi più piccoli */
+  }
+
+  .carcere .titolo {
+    position: relative; /* Cambia da assoluto a relativo */
+    bottom: 0; /* Reset della distanza dal fondo */
+    font-size: 1.2em; /* Ridotto per dispositivi mobili */
+    margin-top: 20px; /* Distanza tra il titolo e l'immagine */
+    left: 0;
+    right: 0;
+    text-align: center; /* Centra il titolo sui dispositivi mobili */
+  }
+}
+
+
+
+
 /* Titolo in basso a sinistra */
 .carcere .titolo {
     position: absolute;
