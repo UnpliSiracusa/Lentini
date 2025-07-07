@@ -441,11 +441,11 @@ p.montserrat-text {
     max-width: 100%;
     text-align: left;
     transform: none;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   #leontinoi .hero-title-bottom-left .shifted {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
 
@@ -839,20 +839,22 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 2em;
 }
 
-/* Media queries per schermi piccoli */
+
+/* Media queries per schermi più piccoli */
 @media (max-width: 768px) {
   .carcere {
-    padding: 30px 15px; /* Aggiungiamo un po' di spazio ai lati per schermi più piccoli */
-    min-height: 350px; /* Impostiamo una min-height inferiore per schermi più piccoli */
+    padding: 30px 15px; /* Meno padding per schermi più piccoli */
+    min-height: 350px; /* Min-height inferiore per schermi piccoli */
+    margin-bottom: 60px; /* Ridotto il margine inferiore */
   }
 
   .carcere .descrizione {
     font-size: 1em;
-    max-width: 90%; /* Un po' più largo per il testo sui dispositivi mobili */
+    max-width: 90%;
   }
 
   .carcere .immagine {
-    max-width: 90%; /* Maggiore larghezza per le immagini su schermi più piccoli */
+    max-width: 90%; /* Maggiore larghezza per immagini su schermi piccoli */
   }
 
   .carcere .titolo {
@@ -862,12 +864,13 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 
 @media (max-width: 480px) {
   .carcere {
-    padding: 20px 10px; /* Ancora meno padding per schermi molto piccoli */
+    padding: 20px 10px; /* Ancora meno padding per dispositivi molto piccoli */
+    margin-bottom: 40px; /* Ancora meno margine per evitare sovrapposizione */
   }
 
   .carcere .descrizione {
-    font-size: 0.95em; /* Ancora più piccolo per dispositivi più piccoli */
-    max-width: 100%; /* Occupiamo tutta la larghezza disponibile */
+    font-size: 0.95em; /* Più piccolo per dispositivi molto piccoli */
+    max-width: 100%; /* Occupa tutta la larghezza disponibile */
   }
 
   .carcere .immagine {
@@ -878,8 +881,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 1em; /* Ancora più piccolo per dispositivi molto piccoli */
   }
 }
-
-
 
 
 
