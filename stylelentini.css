@@ -201,21 +201,80 @@ p.montserrat-text {
   text-decoration: none;
 }
 
-
-/* Responsive */
 @media (max-width: 768px) {
-  #background-container h1 {
-    font-size: 2em;
+  html, body {
+    overflow-x: hidden;
+    font-size: 16px;
+  }
+
+  .menu nav {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .menu nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu nav ul li a {
+    font-size: 1.2em;
+    padding: 12px 24px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  h1 {
+    font-size: 3em !important;
+    text-align: center;
+  }
+
+  #background-container {
+    padding: 40px 10px;
   }
 
   #background-container p {
-    font-size: 1.2em;
+    position: static;
+    margin-top: 20px;
+    font-size: 1.1em;
+    text-align: left;
+  }
+
+  #background-container h1 {
+    position: static;
+    margin-top: 40px;
+    font-size: 3em !important;
+    text-align: left;
+  }
+
+  .banner-terra {
+    flex-direction: column;
+    padding: 40px 15px;
+    height: auto;
+    text-align: center;
+  }
+
+  .banner-content {
+    position: static;
+    transform: none;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   .banner-terra h2 {
-    font-size: 2.5em !important;
+    font-size: 2.2em !important;
+  }
+
+  .banner-description {
+    font-size: 1em;
+    padding: 0 10px;
+    position: static;
+    transform: none;
   }
 }
+
 
 
 /* Stile del banner Cultura con immagine di sfondo */
