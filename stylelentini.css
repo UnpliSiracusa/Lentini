@@ -997,6 +997,117 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     background-color: #81C7EA; /* Colore di hover */
 }
 
+/* Il tuo CSS esistente per il layout su desktop e tablet */
+
+/* Le regole mobile (da aggiungere alla fine del tuo file CSS) */
+@media (max-width: 768px) {
+  /* Regole per il menu */
+  .menu nav ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .menu nav ul li a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+
+  .menu nav ul li a:hover {
+    color: #81C7EA !important;
+  }
+
+  /* Hero Header */
+  h1 {
+    font-size: 3em !important;
+    margin-bottom: 100px;
+  }
+
+  p.montserrat-text {
+    font-size: 1.2em !important;
+    margin: 20px auto 0;
+    width: 90%;
+    text-align: center;
+  }
+
+  /* Banner */
+  .banner-terra {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-terra h2 {
+    font-size: 3em !important;
+  }
+
+  .banner-description {
+    font-size: 1.2em;
+  }
+
+  /* Sezione Leontinoi */
+  #leontinoi {
+    padding: 40px 20px;
+  }
+
+  #leontinoi .content-wrapper {
+    bottom: 20px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #leontinoi .leontinoi-paragraph {
+    font-size: 1em;
+    max-width: 90%;
+  }
+
+  #leontinoi .hero-title-bottom-left {
+    font-size: 2em;
+  }
+
+  /* Sezione Tradizioni */
+  .banner-tradizioni {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tradizioni-title {
+    font-size: 3em;
+  }
+
+  .banner-description {
+    font-size: 1.5em;
+  }
+
+  /* Sezione Carcere */
+  .carcere {
+    height: auto;
+  }
+
+  .carcere .descrizione {
+    font-size: 1.2em;
+    max-width: 90%;
+  }
+
+  .carcere .immagine img {
+    max-width: 80%;
+  }
+
+  /* Footer */
+  .footer-contenuto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-colonna {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Immagini responsivi */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
 
 
 
