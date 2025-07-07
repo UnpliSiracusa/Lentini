@@ -940,7 +940,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     bottom: 10px;
     left: 10px;
   }
-
 /* Stile per il footer */
 .footer {
   background-color: #1893d1;
@@ -963,16 +962,16 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   max-width: 1200px;
   margin-bottom: 30px;
   flex-wrap: wrap; /* Comportamento responsive */
-  align-items: stretch; /* Allinea le colonne in alto */
+  align-items: flex-start; /* Allinea le colonne in alto */
 }
 
 /* Colonne singole */
 .footer-colonna {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Centra gli elementi all'interno della colonna */
+  align-items: flex-start; /* Allineamento a sinistra */
   justify-content: flex-start;
-  width: 45%;
+  width: 45%; /* Occupano il 45% della larghezza */
   text-align: left;
   min-height: 350px; /* Altezza minima per evitare colonne troppo corte */
 }
@@ -981,22 +980,21 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 .header-block {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra titolo e logo */
+  align-items: center;
   text-align: center;
-  margin-bottom: 40px; /* Spazio uniforme tra logo/titolo e contatti */
+  margin-bottom: 40px;
 }
 
 .header-block h3 {
-  font-size: 38px; /* Aumentato il font-size per il titolo */
-  font-weight: 700;
+  font-size: 36px;
   margin-bottom: 12px;
   font-family: 'DM Serif Display', serif;
 }
 
 .header-block img {
   display: block;
-  margin: 10px auto 40px auto; /* Centra orizzontalmente */
-  width: 80px; /* Ridotto a 80px per uniformarlo */
+  margin: 10px auto 40px auto;
+  width: 80px; /* Logo di dimensioni uniformi */
   height: auto;
 }
 
@@ -1006,7 +1004,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   align-items: center;
   width: 100%;
   max-width: 250px;
-  margin-bottom: 10px; /* Distanza tra le righe di contatto */
+  margin-bottom: 10px;
 }
 
 /* Icone */
@@ -1021,10 +1019,10 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 /* Testo contatti */
 .contact-item span,
 .contact-item a {
-  font-size: 16px; /* Aumentato il font-size per migliorare la leggibilità */
+  font-size: 16px;
   color: #EDF7FD;
   text-decoration: none;
-  vertical-align: middle; /* Allineamento verticale */
+  vertical-align: middle;
 }
 
 /* Footer basso */
@@ -1054,7 +1052,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 
 .contact-item:hover {
   opacity: 0.8;
-  transform: translateX(5px); /* Spostamento leggero verso destra */
+  transform: translateX(5px); /* Spostamento verso destra */
 }
 
 /* Media Queries per dispositivi mobili */
@@ -1062,12 +1060,12 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   .footer-contenuto {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Diminuisce lo spazio tra le colonne sui dispositivi mobili */
-    padding: 0 20px; /* Aggiungi padding per dare spazio sui bordi */
+    gap: 20px;
+    padding: 0 20px;
   }
 
   .footer-colonna {
-    width: 100%; /* Le colonne occupano l'intera larghezza */
+    width: 100%; /* Colonne si adattano al 100% della larghezza */
     text-align: center;
   }
 
@@ -1076,7 +1074,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   }
 
   .header-block img {
-    width: 70px; /* Riduce le dimensioni del logo sui dispositivi mobili */
+    width: 70px; /* Logo più piccolo sui dispositivi mobili */
   }
 }
 
@@ -1085,20 +1083,20 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   overflow: hidden;
   background-color: #1893d1;
   padding: 30px 0;
-  text-align: center; /* Centra il contenuto incluso il titolo */
+  text-align: center;
 }
 
 .sponsor-carousel h4 {
-  margin-bottom: 24px; /* Distanza sotto il titolo */
-  color: #EDF7FD; /* colore testo */
+  margin-bottom: 24px;
+  color: #EDF7FD;
   font-weight: bold;
   font-family: "DM Serif Display", serif;
-  font-size: 2.5rem; /* Aumentato */
+  font-size: 2.5rem;
 }
 
 .sponsor-track {
   display: flex;
-  animation: scroll-sponsors 30s linear infinite; /* durata aumentata da 12s a 30s per rallentare */
+  animation: scroll-sponsors 12s linear infinite; /* Durata dell'animazione normale */
   justify-content: center;
 }
 
@@ -1128,16 +1126,16 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 20px; /* Posizione del bottone in basso */
-  right: 20px;  /* Posizione del bottone a destra */
-  background-color: #edf7ed; /* Colore di sfondo del bottone */
-  color: #004F9F; /* Colore dell'icona */
-  border-radius: 50%; /* Bottone circolare */
-  padding: 10px; /* Distanza attorno all'icona */
-  opacity: 0; /* Il bottone sarà inizialmente invisibile */
-  transition: opacity 0.3s ease; /* Animazione per l'opacità */
-  z-index: 1000; /* Assicura che il bottone sia sopra altri elementi */
-  cursor: pointer; /* Cursore a forma di mano per indicare cliccabile */
+  bottom: 20px;
+  right: 20px;
+  background-color: #edf7ed;
+  color: #004F9F;
+  border-radius: 50%;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 /* Quando si scorre verso il basso e il bottone è visibile */
@@ -1145,16 +1143,15 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   opacity: 1; /* Il bottone diventa visibile */
 }
 
-/* Stile per l'icona della freccia */
 .back-to-top svg {
-  width: 24px; /* Dimensione dell'icona */
+  width: 24px;
   height: 24px;
-  fill: #81C7EA; /* Colore dell'icona */
+  fill: #81C7EA;
 }
 
 /* Cambia colore quando si passa sopra il bottone */
 .back-to-top:hover {
-  background-color: #81C7EA; /* Colore di hover */
+  background-color: #81C7EA;
 }
 
 /* Accessibilità: evidenziazione per navigazione da tastiera */
@@ -1164,10 +1161,6 @@ button:focus-visible {
   outline-offset: 2px;
   border-radius: 4px;
 }
-
-
-
-
 
 
 
