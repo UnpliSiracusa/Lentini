@@ -997,6 +997,13 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     background-color: #81C7EA; /* Colore di hover */
 }
 
+/* Accessibilità: evidenziazione per navigazione da tastiera */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #81C7EA;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
 
 
 
