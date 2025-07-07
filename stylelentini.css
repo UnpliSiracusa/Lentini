@@ -840,13 +840,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
 }
 
 
-/* Media queries per schermi più piccoli */
-@media (max-width: 768px) {
-  .carcere {
-    padding: 30px 15px; /* Meno padding per schermi più piccoli */
-    min-height: 350px; /* Min-height inferiore per schermi piccoli */
-    margin-bottom: 60px; /* Ridotto il margine inferiore */
-  }
+ 
 
   .carcere .descrizione {
     font-size: 1em;
@@ -862,11 +856,7 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   }
 }
 
-@media (max-width: 480px) {
-  .carcere {
-    padding: 20px 10px; /* Ancora meno padding per dispositivi molto piccoli */
-    margin-bottom: 40px; /* Ancora meno margine per evitare sovrapposizione */
-  }
+
 
   .carcere .descrizione {
     font-size: 0.95em; /* Più piccolo per dispositivi molto piccoli */
@@ -882,64 +872,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
   }
 }
 
-
-
-
-@media (max-width: 768px) {
-  .titolo {
-    position: relative;
-    transform: translateX(0) translateY(0); /* Reset per mobile */
-    font-size: 1.2em;
-    bottom: 10px;
-    right: 10px;
-    text-align: center; /* Centra il titolo sui dispositivi mobili */
-  }
-}
-
-
-@media (max-width: 768px) {
-  .descrizione, .testo {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 1.1em; /* Ridotto leggermente per dispositivi più piccoli */
-  }
-}
-@media (max-width: 768px) {
-  .immagine img {
-    max-width: 80%; /* Aumentato per mobile */
-  }
-}
-@media (max-width: 768px) {
-  .fontana-immagine {
-    width: 80%; /* Immagine più grande su dispositivi mobili */
-  }
-  .fontana-testo {
-    font-size: 1em; /* Font più piccolo per il testo mobile */
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-}
-
-@media (max-width: 768px) {
-  .sezione {
-    padding: 50px 10px; /* Ridotto padding sui dispositivi mobili */
-  }
-  .testo {
-    font-size: 1.1em;
-    line-height: 1.5;
-    max-width: 100%; /* Più largo per dispositivi mobili */
-    padding: 0 10px;
-  }
-}
-
-
-/* Miglioramenti generali per mobile */
-@media (max-width: 480px) {
-  .titolo {
-    font-size: 1.1em; /* Ulteriormente ridotto per schermi più piccoli */
-    bottom: 10px;
-    left: 10px;
-  }
 /* Stile per il footer */
 .footer {
   background-color: #1893d1;
