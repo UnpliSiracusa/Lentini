@@ -441,7 +441,7 @@ p.montserrat-text {
     max-width: 100%;
     text-align: left;
     transform: none;
-    font-size: 1.8em;
+    font-size: 1.5em;
   }
 
   #leontinoi .hero-title-bottom-left .shifted {
@@ -513,12 +513,19 @@ p.montserrat-text {
 
 /* Responsività per dispositivi mobili */
 @media (max-width: 768px) {
+    /* Ridurre il titolo per dispositivi mobili */
     .tradizioni-title {
-        font-size: 2.5em; /* Ridotto il titolo per dispositivi mobili */
+        font-size: 2.5em; /* Ridotto per schermi più piccoli */
     }
 
+    /* Ridurre la descrizione */
     .banner-description {
-        font-size: 1em; /* Ridotto il paragrafo per dispositivi mobili */
+        font-size: 1.2em; /* Font ridotto per una lettura più comoda */
+    }
+
+    /* Spaziatura migliore per evitare sovrapposizioni */
+    .banner-content {
+        padding: 30px;
     }
 }
 /* Alfio */
@@ -802,6 +809,65 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 2em;
 }
 
+@media (max-width: 768px) {
+  .titolo {
+    position: relative;
+    transform: translateX(0) translateY(0); /* Reset per mobile */
+    font-size: 1.2em;
+    bottom: 10px;
+    right: 10px;
+    text-align: center; /* Centra il titolo sui dispositivi mobili */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .descrizione, .testo {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 1.1em; /* Ridotto leggermente per dispositivi più piccoli */
+  }
+}
+@media (max-width: 768px) {
+  .immagine img {
+    max-width: 80%; /* Aumentato per mobile */
+  }
+}
+@media (max-width: 768px) {
+  .fontana-immagine {
+    width: 80%; /* Immagine più grande su dispositivi mobili */
+  }
+  .fontana-testo {
+    font-size: 1em; /* Font più piccolo per il testo mobile */
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sezione {
+    padding: 50px 10px; /* Ridotto padding sui dispositivi mobili */
+  }
+  .testo {
+    font-size: 1.1em;
+    line-height: 1.5;
+    max-width: 100%; /* Più largo per dispositivi mobili */
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carcere .immagine img {
+    max-width: 90%; /* Più grande per mobile */
+  }
+}
+/* Miglioramenti generali per mobile */
+@media (max-width: 480px) {
+  .titolo {
+    font-size: 1.1em; /* Ulteriormente ridotto per schermi più piccoli */
+    bottom: 10px;
+    left: 10px;
+  }
 
 
 /* Stile per il footer */
