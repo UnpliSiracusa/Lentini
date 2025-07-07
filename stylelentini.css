@@ -390,6 +390,65 @@ p.montserrat-text {
   font-size: 64px;
 }
 
+@media (max-width: 768px) {
+  /* Banner Cultura */
+  .banner-cultura {
+    height: auto;
+    padding: 80px 20px;
+    background-position: center;
+  }
+
+  .banner-content {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .cultura-title {
+    font-size: 2.5em;
+  }
+
+  .banner-description {
+    position: static;
+    transform: none;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+
+  /* Sezione Leontinoi */
+  #leontinoi {
+    height: auto;
+    padding: 60px 15px;
+  }
+
+  #leontinoi .content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    position: static;
+    padding: 0;
+  }
+
+  #leontinoi .leontinoi-paragraph {
+    position: static;
+    max-width: 100%;
+    font-size: 1em;
+    margin-bottom: 30px;
+  }
+
+  #leontinoi .hero-title-bottom-left {
+    position: static;
+    max-width: 100%;
+    text-align: left;
+    transform: none;
+    font-size: 1.8em;
+  }
+
+  #leontinoi .hero-title-bottom-left .shifted {
+    font-size: 2em;
+  }
+}
+
 
 
 /* Stile per la sezione Tradizioni */
