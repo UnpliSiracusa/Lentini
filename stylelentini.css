@@ -745,20 +745,9 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     background-color: #FAB53B; /* Colore di sfondo giallo */
     padding: 80px 20px;
     text-align: center;
-    height: 500px; /* Imposta l'altezza della sezione per gestire meglio il layout */
-}
-
-@media (max-width: 768px) {
-  .carcere {
-    height: auto; /* Imposta l'altezza su 'auto' per adattarsi meglio al contenuto */
-    padding: 50px 20px; /* Aggiusta padding per migliorare l'aspetto su schermi piccoli */
-    margin-bottom: 40px;
-  }
-}
- @media (max-width: 480px) {
-  .carcere {
-    margin-bottom: 20px; /* Aggiunge spazio inferiore tra la sezione e il footer */
-  }
+  height: auto; /* Altezza automatica */
+    min-height: 450px; /* Altezza minima */
+    margin-bottom: 80px; /* Margine inferiore per evitare che tocchi il footer */
 }
 
 
@@ -793,29 +782,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     border-radius: 6px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
-@media (max-width: 480px) {
-  .carcere .immagine img {
-    max-width: 90%; /* Aumentato per occupare più spazio su schermi molto piccoli */
-  }
-
-  .carcere .titolo {
-    font-size: 1.1em; /* Ancora più piccolo per schermi molto piccoli */
-    text-align: left; /* Allineato a sinistra per una migliore visualizzazione */
-    left: 0;
-    right: 0;
-  }
-}
-@media (max-width: 768px) {
-  .carcere .immagine img {
-    max-width: 90%; /* Maggiore larghezza per immagini su dispositivi mobili */
-  }
-}
-
-@media (max-width: 480px) {
-  .carcere .immagine {
-    position: relative; /* Cambia posizione da assoluta a relativa */
-    bottom: 0; /* Rimuove la distanza dal fondo */
-  }
 
   .carcere .titolo {
     font-size: 1.2em; /* Ridotto per dispositivi mobili */
@@ -829,12 +795,6 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 1em; /* Ridotto per adattarsi meglio ai piccoli schermi */
   }
 }
-@media (max-width: 768px) {
-  .carcere .immagine {
-    position: relative; /* Cambia da assoluto a relativo per evitare sovrapposizioni */
-    margin-bottom: 20px; /* Spazio sotto l'immagine per evitare il contatto con il testo */
-    max-width: 90%; /* Aumenta l'immagine per schermi più piccoli */
-  }
 
   .carcere .titolo {
     position: relative; /* Cambia da assoluto a relativo */
@@ -879,31 +839,50 @@ transform: translateX(250px) translateY(-50px);  /* Sposta il titolo verso destr
     font-size: 2em;
 }
 
+/* Media queries per schermi piccoli */
 @media (max-width: 768px) {
+  .carcere {
+    padding: 30px 15px; /* Aggiungiamo un po' di spazio ai lati per schermi più piccoli */
+    min-height: 350px; /* Impostiamo una min-height inferiore per schermi più piccoli */
+  }
+
+  .carcere .descrizione {
+    font-size: 1em;
+    max-width: 90%; /* Un po' più largo per il testo sui dispositivi mobili */
+  }
+
+  .carcere .immagine {
+    max-width: 90%; /* Maggiore larghezza per le immagini su schermi più piccoli */
+  }
+
   .carcere .titolo {
-    font-size: 1.2em;  /* Ridotto per schermi più piccoli */
-    left: 20px;  /* Allineato più a sinistra per tablet */
-    bottom: 20px; /* Ridotto il margine dal fondo */
-    text-align: center; /* Centrato il titolo */
+    font-size: 1.2em; /* Ridotto per schermi più piccoli */
   }
 }
 
 @media (max-width: 480px) {
+  .carcere {
+    padding: 20px 10px; /* Ancora meno padding per schermi molto piccoli */
+  }
+
+  .carcere .descrizione {
+    font-size: 0.95em; /* Ancora più piccolo per dispositivi più piccoli */
+    max-width: 100%; /* Occupiamo tutta la larghezza disponibile */
+  }
+
+  .carcere .immagine {
+    max-width: 100%; /* L'immagine occupa tutta la larghezza */
+  }
+
   .carcere .titolo {
-    font-size: 1em; /* Ancora più piccolo per dispositivi mobili */
-    left: 0; /* Centrato a sinistra */
-    right: 0;
-    bottom: 10px; /* Ridotto il margine dal fondo */
-  }
-
-  .carcere .titolo .riga1 {
-    font-size: 1.2em;  /* Più piccolo per mobile */
-  }
-
-  .carcere .titolo .riga2 {
-    font-size: 1.6em;  /* Più piccolo per mobile */
+    font-size: 1em; /* Ancora più piccolo per dispositivi molto piccoli */
   }
 }
+
+
+
+
+
 
 @media (max-width: 768px) {
   .titolo {
